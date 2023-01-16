@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import Ananda from '../../assets/fonts/Ananda.ttf';
 
 export const LightTheme = createTheme({
   palette: {
@@ -17,7 +16,7 @@ export const LightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Ananda',
+    fontFamily: 'Geosans Oblique',
   },
   components: {
     MuiButton: {
