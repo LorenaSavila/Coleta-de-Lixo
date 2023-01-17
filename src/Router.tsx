@@ -7,7 +7,7 @@ import PaginaErro from './PaginaErro';
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/home" element={<App />} />
       <Route path="/coleta-de-lixo" element={<ColetaDeLixo />} />
       <Route path="/coleta-seletiva" element={<ColetaSeletiva />} />
       <Route path="/*" element={<PaginaErro />} />
