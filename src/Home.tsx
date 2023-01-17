@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import background from '/background.jpg';
 import { homePage } from './shared/constants/constants';
 
-function App() {
+const Home = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -54,6 +54,6 @@ function App() {
       </Grid>
     </Grid>
   );
-}
+};
 
-export default App;
+export default Home;
