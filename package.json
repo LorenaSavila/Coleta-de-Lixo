@@ -1,7 +1,7 @@
 {
   "homepage": "https://LorenaSavila.github.io/Coleta-de-Lixo",
   "name": "coleta-de-lixo",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
