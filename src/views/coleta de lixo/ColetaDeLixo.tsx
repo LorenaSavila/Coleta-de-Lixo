@@ -1,8 +1,11 @@
 import { Grid, TextField, Typography } from '@mui/material';
 import BaseLayout from '../../shared/components/BaseLayout';
 import ListaBairros from './ListaBairros';
+import { useState } from 'react';
 
 const ColetaDeLixo = () => {
+  const [search, setSearch] = useState<string>('');
+
   return (
     <BaseLayout>
       <Grid item mb={2}>
@@ -17,7 +20,13 @@ const ColetaDeLixo = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} lg={12}>
-          <TextField variant="outlined" placeholder="Bairro" fullWidth />
+          <TextField
+            variant="outlined"
+            placeholder="Bairro"
+            fullWidth
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </Grid>
         <Grid item lg={12} mb={2}>
           <Typography variant="h5" fontWeight="bold">
@@ -25,7 +34,7 @@ const ColetaDeLixo = () => {
           </Typography>
         </Grid>
         <Grid item>
-          <ListaBairros />
+          <ListaBairros searchItem={search} setSearchItem={setSearch} />
         </Grid>
       </Grid>
     </BaseLayout>

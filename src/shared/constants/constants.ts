@@ -5,7 +5,7 @@ export const homePage = {
 
 export const bairros = {
   1: [
-    'Arraial dos Forros da puta',
+    'Arraial dos Forros',
     'Av.João Antunes de Oliveira',
     'Bela Vista',
     'Bicame',

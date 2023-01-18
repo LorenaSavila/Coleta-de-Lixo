@@ -2,12 +2,18 @@ import { useState } from 'react';
 import { Grid, Tab, Tabs, useMediaQuery, useTheme } from '@mui/material';
 import PainelBairros from './PainelBairros';
 
-const ListaBairros: React.FC = () => {
+export interface ListaBairrosProps {
+  searchItem: string;
+  setSearchItem: React.Dispatch<React.SetStateAction<string>>;
+}
+const ListaBairros: React.FC<ListaBairrosProps> = ({ searchItem, setSearchItem }) => {
   const [value, setValue] = useState(0);
   const theme = useTheme();
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+
+    setSearchItem('');
   };
 
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -38,7 +44,7 @@ const ListaBairros: React.FC = () => {
       </Grid>
 
       <Grid item xs={9} sm={9} md={9} lg={9} xl={9}>
-        <PainelBairros value={value} index={value} />
+        <PainelBairros value={value} index={value} searchItem={searchItem} />
       </Grid>
     </Grid>
   );

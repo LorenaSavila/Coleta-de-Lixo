@@ -2,23 +2,37 @@ import { Grid, List, ListItemButton, Typography, useMediaQuery, useTheme } from 
 import { useEffect, useState } from 'react';
 import { bairros } from '../../shared/constants/constants';
 
-interface PainelBairrosProps {
+export interface PainelBairrosProps {
   index: number;
   value: number;
+  searchItem: string;
 }
 
-const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value }) => {
+const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem }) => {
   const theme = useTheme();
   const [selected, setSelected] = useState<string>('');
+  const [listToShow, setListToShow] = useState<Array<string>>([]);
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const items = Object.values(bairros).at(value);
+  const allItems = Object.values(bairros);
+  const selectedItems = allItems.at(value);
+  const bairrosList = allItems.flat(1);
+
+  const searchList = bairrosList.filter((i) => i.toLowerCase().includes(searchItem.toLowerCase()));
 
   useEffect(() => {
     if (!!selected) return window.alert(selected);
-
-    return;
   }, [selected]);
+
+  useEffect(() => {
+    if (searchItem.length === 0) {
+      setListToShow(selectedItems!);
+
+      return;
+    }
+
+    setListToShow(searchList);
+  }, [searchItem, value]);
 
   return (
     <Grid
@@ -32,8 +46,8 @@ const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value }) => {
       <Grid item xs={12} lg={12}>
         {value === index && (
           <List>
-            {items &&
-              items.map((i) => (
+            {listToShow &&
+              listToShow.map((i) => (
                 <ListItemButton key={i} selected={selected === i} onClick={() => setSelected(i)}>
                   <Typography variant="body1">{i}</Typography>
                 </ListItemButton>
