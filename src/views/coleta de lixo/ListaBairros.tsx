@@ -18,7 +18,8 @@ const ListaBairros: React.FC = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      sx={{ minHeight: matchesSM ? 200 : 400, minWidth: matchesSM ? 300 : 600 }}
+      minWidth={matchesSM ? 320 : 700}
+      minHeight={matchesSM ? 200 : 300}
     >
       <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
         <Tabs
