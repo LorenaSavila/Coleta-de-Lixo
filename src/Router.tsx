@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
-import ColetaDeLixo from './ColetaDeLixo';
+import ColetaDeLixo from './views/coleta de lixo/ColetaDeLixo';
 import ColetaSeletiva from './ColetaSeletiva';
-import PaginaErro from './PaginaErro';
+import PaginaErro from './views/PaginaErro';
 
 const AppRouter = () => {
   return (
