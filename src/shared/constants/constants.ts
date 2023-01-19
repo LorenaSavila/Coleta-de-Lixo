@@ -3,6 +3,14 @@ export const homePage = {
   subtitle: 'Cuide você também!',
 };
 
+export const modalInfos = [
+'Não haverá coleta dos domingos',
+'Coloque o lixo em sua respectiva porta',
+'O horário poderá variar em até 30 minutos',
+'O lixo só será recolhido acondicionado em sacos plásticos',
+'Não será recolhido: Entulho de obras, terras, podas de árvores e mobiliários.'
+]
+
 export const bairros = {
   1: [
     'Arraial dos Forros',

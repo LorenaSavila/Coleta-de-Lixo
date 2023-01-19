@@ -11,7 +11,7 @@ const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
       container
       height="100%"
       width="100%"
-      direction="column"
+      direction="row"
       justifyContent="center"
       alignItems="center"
       sx={{
@@ -22,8 +22,18 @@ const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <Grid item xs={6} lg={6} width={matchesSM ? '90%' : '40%'}>
-        <Paper elevation={6} color="#ffff" sx={{ borderRadius: 5, p: 4 }}>
+      <Grid container item xs={11}>
+        <Paper
+          elevation={6}
+          color="#ffff"
+          sx={{
+            borderRadius: 5,
+            p: 4,
+          }}
+          component={Grid}
+          item
+          xs
+        >
           {children}
         </Paper>
       </Grid>

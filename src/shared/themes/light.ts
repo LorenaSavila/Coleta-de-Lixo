@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material';
 
+const baseTheme = createTheme();
+
 export const LightTheme = createTheme({
   palette: {
     primary: {
@@ -25,6 +27,17 @@ export const LightTheme = createTheme({
                 fontFamily: 'Geosans '
             }
         }
+    },
+    MuiTab : {
+      styleOverrides: {
+        root: {
+          minWidth: 1,
+          fontSize: 20,
+          [baseTheme.breakpoints.down('sm')] : {
+            fontSize: 16
+          }
+        }
+      }
     }
   }
 });

@@ -41,7 +41,8 @@ const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem 
       hidden={value !== index}
       alignItems="center"
       justifyContent="center"
-      sx={{ overflow: 'auto', maxHeight: matchesSM ? 200 : 300, maxWidth: matchesSM ? 400 : 1200 }}
+      sx={{ overflow: 'auto' }}
+      maxHeight={matchesSM ? 240 : 300}
     >
       <Grid item xs={12} lg={12}>
         {value === index && (
@@ -49,7 +50,7 @@ const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem 
             {listToShow &&
               listToShow.map((i) => (
                 <ListItemButton key={i} selected={selected === i} onClick={() => setSelected(i)}>
-                  <Typography variant="body1">{i}</Typography>
+                  <Typography variant="h6">{i}</Typography>
                 </ListItemButton>
               ))}
           </List>
