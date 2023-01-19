@@ -10,7 +10,7 @@ const AppRouter = () => {
       <Route path="/" element={<Home />} />
       <Route path="/consulta-bairro" element={<ColetaDeLixo />} />
       <Route path="/coleta-seletiva" element={<ColetaSeletiva />} />
-      <Route path="/*" element={<PaginaErro />} />
+      <Route path="/erro" element={<PaginaErro />} />
     </Routes>
   );
 };
