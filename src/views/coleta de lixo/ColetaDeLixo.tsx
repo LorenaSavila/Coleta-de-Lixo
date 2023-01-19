@@ -19,10 +19,10 @@ const ColetaDeLixo = () => {
               Coleta de lixo
             </Typography>
           </Grid>
-          <Grid item sx={{ pb: 1 }}>
+          <Grid item>
             <Tooltip title="Informações importantes">
               <IconButton onClick={() => setOpenModal(true)}>
-                <InfoOutlinedIcon fontSize="small" />
+                <InfoOutlinedIcon fontSize="medium" />
               </IconButton>
             </Tooltip>
           </Grid>
@@ -48,18 +48,11 @@ const ColetaDeLixo = () => {
             </Typography>
           </Grid>
           <Grid item alignSelf="center" xs={12}>
-            <ListaBairros searchItem={search} setSearchItem={setSearch} />
-          </Grid>
-          <Grid item>
-            <BaseModal
-              open={openModal}
-              onClose={() => setOpenModal(false)}
-              title="Informações importantes: "
-              texts={modalInfos}
-            />
+            <ListaBairros searchItem={search} />
           </Grid>
         </Grid>
       </Grid>
+      <BaseModal open={openModal} onClose={() => setOpenModal(false)} title="Importante" texts={modalInfos} />
     </BaseLayout>
   );
 };

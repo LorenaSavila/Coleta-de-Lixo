@@ -4,9 +4,9 @@ import PainelBairros from './PainelBairros';
 
 export interface ListaBairrosProps {
   searchItem: string;
-  setSearchItem: React.Dispatch<React.SetStateAction<string>>;
 }
-const ListaBairros: React.FC<ListaBairrosProps> = ({ searchItem, setSearchItem }) => {
+
+const ListaBairros: React.FC<ListaBairrosProps> = ({ searchItem }) => {
   const [value, setValue] = useState(0);
 
   return (

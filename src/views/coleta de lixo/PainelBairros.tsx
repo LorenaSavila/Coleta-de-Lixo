@@ -1,6 +1,7 @@
 import { Grid, List, ListItemButton, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { bairros } from '../../shared/constants/constants';
+import BaseModal from '../../shared/components/BaseModal';
+import { bairros, diasSemana } from '../../shared/constants/constants';
 
 export interface PainelBairrosProps {
   index: number;
@@ -8,21 +9,31 @@ export interface PainelBairrosProps {
   searchItem: string;
 }
 
+interface bairroSchema {
+  id: number;
+  nome: string;
+  horario: string;
+  dia: number;
+}
+
 const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem }) => {
   const theme = useTheme();
-  const [selected, setSelected] = useState<string>('');
-  const [listToShow, setListToShow] = useState<Array<string>>([]);
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [selected, setSelected] = useState<bairroSchema>({ id: 99, nome: '', horario: '', dia: 0 });
+  const [listToShow, setListToShow] = useState<Array<bairroSchema>>([]);
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const allItems = Object.values(bairros);
   const selectedItems = allItems.at(value);
   const bairrosList = allItems.flat(1);
 
-  const searchList = bairrosList.filter((i) => i.toLowerCase().includes(searchItem.toLowerCase()));
+  const searchList = bairrosList.filter((i) => i.nome.toLowerCase().includes(searchItem.toLowerCase()));
 
-  useEffect(() => {
-    if (!!selected) return window.alert(selected);
-  }, [selected]);
+  const handleClickItem = (item: bairroSchema) => {
+    setSelected(item);
+    setOpenModal(true);
+  };
 
   useEffect(() => {
     if (searchItem.length === 0) {
@@ -49,13 +60,29 @@ const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem 
           <List>
             {listToShow &&
               listToShow.map((i) => (
-                <ListItemButton key={i} selected={selected === i} onClick={() => setSelected(i)}>
-                  <Typography variant="h6">{i}</Typography>
+                <ListItemButton key={i.id} selected={selected.id === i.id} onClick={() => handleClickItem(i)}>
+                  <Typography variant="h6">{i.nome}</Typography>
                 </ListItemButton>
               ))}
           </List>
         )}
       </Grid>
+      <BaseModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        title="Informações"
+        texts={[
+          <>
+            <strong>Bairro: {selected.nome}</strong>
+          </>,
+          <>
+            <strong>Hórario da coleta: {selected.horario}</strong>
+          </>,
+          <>
+            <strong>Dias de coleta: {diasSemana[selected.dia]}</strong>
+          </>,
+        ]}
+      />
     </Grid>
   );
 };

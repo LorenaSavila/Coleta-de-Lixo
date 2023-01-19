@@ -18,13 +18,13 @@ export const LightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Geosans Oblique',
+    fontFamily: 'Geosans',
   },
   components: {
     MuiButton: {
         styleOverrides: {
             root: {
-                fontFamily: 'Geosans '
+                fontFamily: 'Geosans Oblique'
             }
         }
     },
