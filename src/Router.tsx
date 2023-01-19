@@ -6,7 +6,7 @@ import PaginaErro from './views/PaginaErro';
 
 const AppRouter = () => {
   return (
-    <Routes >
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/consulta-bairro" element={<ColetaDeLixo />} />
       <Route path="/coleta-seletiva" element={<ColetaSeletiva />} />
