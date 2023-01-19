@@ -3,6 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://lorenasavila.github.io/coleta-de-lixo/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
