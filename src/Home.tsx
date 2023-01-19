@@ -21,7 +21,7 @@ const Home = () => {
 
       <Grid container item direction="row" justifyContent="center" spacing={2}>
         <Grid item xs={8} lg={4} md={3}>
-          <Button fullWidth variant="contained" color="primary" onClick={() => navigate('/coleta-de-lixo')}>
+          <Button fullWidth variant="contained" color="primary" onClick={() => navigate('/consulta-bairro')}>
             Coleta de Lixo
           </Button>
         </Grid>
