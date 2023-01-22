@@ -12,7 +12,7 @@ export default defineConfig({
       includeAssets: [
         'favicon.ico',
         'apple-touch-icon.png',
-        'maskable_icon_x192.png',
+        'maskable_icon.png',
         'fonts/*.ttf',
         'images/*.png',
         'logo/*.png',
@@ -27,14 +27,14 @@ export default defineConfig({
         theme_color: '#53b8e4',
         background_color: '#53b8e4',
         display: 'standalone',
-        orientation: 'any',
+        orientation: 'portrait',
         scope: '.',
         id: '/',
         start_url: './index.html',
         icons: [
           {
-            sizes: '192x192',
-            src: '/maskable_icon_x192',
+            sizes: '196x196',
+            src: '/maskable_icon',
             type: 'image/png',
             purpose: 'maskable',
           },
