@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
+    "preview": "npm run build && vite preview",
     "predeploy": "npm run build && git add . && git commit -m 'bosta' && git push",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
@@ -18,7 +18,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-material-ui-carousel": "^3.4.2",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.6.1",
+    "vite-plugin-pwa": "^0.14.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

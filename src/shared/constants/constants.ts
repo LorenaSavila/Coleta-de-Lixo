@@ -73,5 +73,3 @@ export const bairros = {
     { id: 36, nome: 'Vila Operária', horario: '7:30', dia: 1 },
   ],
 };
-
-// <a href="https://br.freepik.com/vetores-gratis/lixeiras-laranja-com-simbolo-de-reciclagem-em-fundo-branco_8917504.htm">Imagem de brgfx</a> no Freepik

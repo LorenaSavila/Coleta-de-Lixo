@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import AppRouter from './Router';
 import { AppThemeProvider } from './shared/context/ThemeContext';
-import * as ServiceWorker from './ServiceWorker';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -16,5 +15,3 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </AppThemeProvider>
   </React.StrictMode>
 );
-
-ServiceWorker.default();
