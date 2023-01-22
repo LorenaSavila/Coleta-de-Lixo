@@ -37,27 +37,27 @@ export default defineConfig({
           },
           {
             sizes: '192x192',
-            src: '/logo/logo192.png',
+            src: '/logo192.png',
             type: 'image/png',
           },
           {
             sizes: '256x256',
-            src: '/logo/logo256.png',
+            src: '/logo256.png',
             type: 'image/png',
           },
           {
             sizes: '384x384',
-            src: '/logo/logo384.png',
+            src: '/logo384.png',
             type: 'image/png',
           },
           {
             sizes: '512x512',
-            src: '/logo/logo512.png',
+            src: '/logo512.png',
             type: 'image/png',
           },
           {
             sizes: '512x512',
-            src: '/logo/logo512.png',
+            src: '/logo512.png',
             type: 'image/png',
             purpose: 'maskable',
           },
