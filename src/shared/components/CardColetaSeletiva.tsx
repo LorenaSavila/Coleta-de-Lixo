@@ -1,13 +1,13 @@
 import { Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 
-interface CardWithAccordionProps {
+interface CardColetaSeletivaProps {
   title: string;
   subtitle: string;
   text: string;
   image: string;
 }
 
-const CardWithAccordion: React.FC<CardWithAccordionProps> = ({ title, subtitle, text, image }) => {
+const CardColetaSeletiva: React.FC<CardColetaSeletivaProps> = ({ title, subtitle, text, image }) => {
   return (
     <Card variant="outlined" sx={{ height: '100%' }}>
       <CardHeader
@@ -27,4 +27,4 @@ const CardWithAccordion: React.FC<CardWithAccordionProps> = ({ title, subtitle, 
   );
 };
 
-export default CardWithAccordion;
+export default CardColetaSeletiva;

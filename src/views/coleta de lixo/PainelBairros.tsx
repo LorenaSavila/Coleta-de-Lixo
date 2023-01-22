@@ -72,15 +72,9 @@ const PainelBairros: React.FC<PainelBairrosProps> = ({ index, value, searchItem 
         onClose={() => setOpenModal(false)}
         title="Informações"
         texts={[
-          <>
-            <strong>Bairro: {selected.nome}</strong>
-          </>,
-          <>
-            <strong>Hórario da coleta: {selected.horario}</strong>
-          </>,
-          <>
-            <strong>Dias de coleta: {diasSemana[selected.dia]}</strong>
-          </>,
+          `Bairro: ${selected.nome}`,
+          `Hórario da coleta: ${selected.horario}`,
+          `Dias de coleta: ${diasSemana[selected.dia]}`,
         ]}
       />
     </Grid>

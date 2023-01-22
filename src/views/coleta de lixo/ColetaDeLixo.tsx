@@ -1,11 +1,11 @@
-import { Grid, IconButton, TextField, Tooltip, Typography } from '@mui/material';
+import { Grid, TextField, Typography } from '@mui/material';
 import BaseLayout from '../../shared/components/BaseLayout';
 import ListaBairros from './ListaBairros';
 import { useState } from 'react';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import BaseModal from '../../shared/components/BaseModal';
 import { modalInfos } from '../../shared/constants/constants';
 import BackButton from '../../shared/components/BackButton';
+import SectionTitleWithTooltip from '../../shared/components/SectionTitleWithTooltip';
 
 const ColetaDeLixo = () => {
   const [search, setSearch] = useState<string>('');
@@ -17,19 +17,8 @@ const ColetaDeLixo = () => {
         <Grid item>
           <BackButton />
         </Grid>
-        <Grid container item alignItems="center">
-          <Grid item>
-            <Typography variant="h4" fontWeight="bold" textAlign="center">
-              Coleta de lixo
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Informações importantes">
-              <IconButton onClick={() => setOpenModal(true)}>
-                <InfoOutlinedIcon fontSize="medium" />
-              </IconButton>
-            </Tooltip>
-          </Grid>
+        <Grid container item>
+          <SectionTitleWithTooltip title="Coleta de lixo" onClick={() => setOpenModal(true)} />
         </Grid>
         <Grid container item spacing={2} xs={12}>
           <Grid item xs={12} lg={12}>

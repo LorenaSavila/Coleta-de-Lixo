@@ -26,7 +26,7 @@ const BaseModal: React.FC<BaseModalProps> = ({ open, onClose, title, texts }) =>
           transform: 'translate(-50%, -50%)',
           width: matchesSM ? '95%' : '70%',
           bgcolor: 'background.paper',
-          height: matchesSM ? '60%' : '30%',
+          height: matchesSM ? '60%' : '50%',
           borderRadius: 4,
           p: 2,
         }}
@@ -44,10 +44,12 @@ const BaseModal: React.FC<BaseModalProps> = ({ open, onClose, title, texts }) =>
         </Grid>
         {texts.map((i, index) => (
           <Grid item xs={12} key={index}>
-            <Typography variant="h6">{i}</Typography>
+            <Typography variant="h6" fontWeight="bold">
+              {i}
+            </Typography>
           </Grid>
         ))}
-        <Grid item xs={8} alignSelf="center">
+        <Grid item xs={12} sm={7} md={5} lg={4} alignSelf="center">
           <Button
             variant="contained"
             color="primary"
