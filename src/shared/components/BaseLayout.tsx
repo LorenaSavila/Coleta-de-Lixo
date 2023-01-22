@@ -29,6 +29,7 @@ const BaseLayout: React.FC<PropsWithChildren> = ({ children }) => {
           sx={{
             borderRadius: 5,
             p: 4,
+            overflowX: 'hidden',
           }}
           component={Grid}
           item

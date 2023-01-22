@@ -5,6 +5,7 @@ import { useState } from 'react';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import BaseModal from '../../shared/components/BaseModal';
 import { modalInfos } from '../../shared/constants/constants';
+import BackButton from '../../shared/components/BackButton';
 
 const ColetaDeLixo = () => {
   const [search, setSearch] = useState<string>('');
@@ -13,6 +14,9 @@ const ColetaDeLixo = () => {
   return (
     <BaseLayout>
       <Grid container spacing={2}>
+        <Grid item>
+          <BackButton />
+        </Grid>
         <Grid container item alignItems="center">
           <Grid item>
             <Typography variant="h4" fontWeight="bold" textAlign="center">
@@ -56,4 +60,5 @@ const ColetaDeLixo = () => {
     </BaseLayout>
   );
 };
+
 export default ColetaDeLixo;

@@ -17,3 +17,7 @@
     font-family: 'Geosans Oblique';
     src: url(./src/assets/fonts/GeosansLight-Oblique.ttf) format("truetype")
 }
+
+body {
+    overflow-x: hidden;
+}

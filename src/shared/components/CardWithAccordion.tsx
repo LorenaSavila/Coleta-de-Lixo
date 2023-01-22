@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 
 interface CardWithAccordionProps {
@@ -7,15 +6,22 @@ interface CardWithAccordionProps {
   text: string;
   image: string;
 }
-const CardWithAccordion: React.FC<CardWithAccordionProps> = ({ title, subtitle, text, image }) => {
-  const [expanded, setExpanded] = useState<boolean>();
 
+const CardWithAccordion: React.FC<CardWithAccordionProps> = ({ title, subtitle, text, image }) => {
   return (
-    <Card variant="outlined" sx={{ maxHeight: 600 }}>
-      <CardHeader titleTypographyProps={{ fontWeight: 'bold' }} title={title} subheader={subtitle} />
-      <CardMedia component="img" image={image} alt="card-image" width={100} />
-      <CardContent>
-        <Typography variant="inherit">{text}</Typography>
+    <Card variant="outlined" sx={{ height: '100%' }}>
+      <CardHeader
+        titleTypographyProps={{ fontWeight: 'bold', variant: 'h6' }}
+        subheaderTypographyProps={{ variant: 'subtitle1' }}
+        title={title}
+        subheader={subtitle}
+        sx={{ height: '30%', alignItems: 'flex-start' }}
+      />
+      <CardMedia image={image} sx={{ height: 180, backgroundSize: 'contain' }} />
+      <CardContent sx={{ height: '40%', alignItems: 'flex-start' }}>
+        <Typography gutterBottom variant="body1">
+          {text}
+        </Typography>
       </CardContent>
     </Card>
   );

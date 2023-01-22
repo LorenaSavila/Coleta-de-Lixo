@@ -1,8 +1,7 @@
 import { Button, Grid, IconButton, Modal, Typography, useMediaQuery, useTheme } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CallIcon from '@mui/icons-material/Call';
-import { callTel, telefone, whatsappApi, wppNumber } from '../constants/constants';
+import { callTel, telefone } from '../constants/constants';
 
 export interface BaseModalProps {
   open: boolean;
@@ -59,19 +58,6 @@ const BaseModal: React.FC<BaseModalProps> = ({ open, onClose, title, texts }) =>
             fullWidth
           >
             Telefone: {telefone}
-          </Button>
-        </Grid>
-        <Grid item xs={8} alignSelf="center">
-          <Button
-            variant="contained"
-            color="secondary"
-            startIcon={<WhatsAppIcon fontSize="large" />}
-            size="small"
-            sx={{ fontSize: '1rem', textTransform: 'none', fontWeight: 'bold' }}
-            onClick={() => window.open(whatsappApi)}
-            fullWidth
-          >
-            Whatsapp: {wppNumber}
           </Button>
         </Grid>
       </Grid>

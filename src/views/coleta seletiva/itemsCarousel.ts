@@ -7,18 +7,25 @@ import paper from '/coleta seletiva/paper.jpg';
 
 export const itemsCarousel = [
   {
-    id: 0,
-    title: 'Plástico',
-    subtitle: '',
-    image: plastic,
-    text: 'Sacos e sacolas, frascos de produtos, tampas e potes, embalagens PET, garrafas PET.',
+    id: 5,
+    title: 'Coleta de lâmpadas',
+    subtitle: 'Lâmpadas soltas não serão recolhidas.',
+    image: eletronic,
+    text: 'Embale separadamente as lâmpadas queimadas ou quebradas para evitar acidentes. ',
   },
   {
     id: 1,
     title: 'Vidro',
-    subtitle: 'Vidros devem ser embalados em jornais para evitar acidentes',
+    subtitle: 'Embrulhe em jornal para evitar acidentes',
     image: glass,
     text: 'Garrafas, potes de conservas, frascos variados, copos e pratos, cacos em geral.',
+  },
+  {
+    id: 0,
+    title: 'Plástico',
+    subtitle: '',
+    image: plastic,
+    text: 'Sacos e sacolas, frascos de produtos, tampas e potes, embalagens e garrafas PET.',
   },
   {
     id: 2,
@@ -40,12 +47,5 @@ export const itemsCarousel = [
     subtitle: '',
     image: eletronic,
     text: 'Pilhas, baterias, eletrodomésticos e eletroeletrônicos.',
-  },
-  {
-    id: 5,
-    title: 'Coleta de lâmpadas',
-    subtitle: 'Lâmpadas soltas não serão recolhidas.',
-    image: organic,
-    text: 'Embale separadamente as lâmpadas queimadas ou quebradas para evitar acidentes. ',
   },
 ];
