@@ -9,14 +9,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: [
-        'favicon.ico',
-        'apple-touch-icon.png',
-        'maskable_icon.png',
-        'fonts/*.ttf',
-        'coleta seletiva/*.jpg',
-        'background.jpg',
-      ],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'fonts/*.ttf', 'coleta seletiva/*.jpg', 'background.jpg'],
       manifest: {
         name: 'Coleta de lixo',
         short_name: 'Coleta de lixo',
@@ -31,33 +24,33 @@ export default defineConfig({
         icons: [
           {
             sizes: '196x196',
-            src: '/maskable_icon',
+            src: 'maskable_icon',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
             sizes: '192x192',
-            src: '/logo192.png',
+            src: 'logo192.png',
             type: 'image/png',
           },
           {
             sizes: '256x256',
-            src: '/logo256.png',
+            src: 'logo256.png',
             type: 'image/png',
           },
           {
             sizes: '384x384',
-            src: '/logo384.png',
+            src: 'logo384.png',
             type: 'image/png',
           },
           {
             sizes: '512x512',
-            src: '/logo512.png',
+            src: 'logo512.png',
             type: 'image/png',
           },
           {
             sizes: '512x512',
-            src: '/logo512.png',
+            src: 'logo512.png',
             type: 'image/png',
             purpose: 'maskable',
           },
