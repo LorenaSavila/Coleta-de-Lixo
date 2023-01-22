@@ -18,6 +18,7 @@ export default defineConfig({
         'coleta seletiva/*.jpg',
         'background.jpg',
         '**/*.ttf',
+        '*/*.png',
       ],
       manifest: {
         name: 'Coleta de lixo',
@@ -25,9 +26,9 @@ export default defineConfig({
         description: 'Informações sobre a coleta de lixo em Diamantina',
         theme_color: '#53b8e4',
         background_color: '#53b8e4',
-        display: 'fullscreen',
+        display: 'standalone',
         orientation: 'any',
-        scope: '/',
+        scope: '.',
         id: '/',
         start_url: '/',
         icons: [
